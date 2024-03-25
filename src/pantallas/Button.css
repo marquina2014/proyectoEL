@@ -1,0 +1,47 @@
+/* Button styles */
+button {
+    background: black;
+    border: 2px solid;
+    font: inherit;
+    line-height: 1;
+    margin: 0.5em;
+    padding: 1em 2em;
+    color: var(--color);
+    transition: 0.25s;
+  }
+  
+  /* Pulse animation styles */
+  .pulse {
+    --color: #0fdac9; /* Default button color */
+    --hover: #8fc283; /* Pulse effect color */
+  }
+  
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 var(--hover);
+    }
+    100% {
+      box-shadow: 0 0 0 2em var(--hover); /* Increase shadow size for pulse effect */
+      transform: scale(0.8); /* Optional: Add slight scale for emphasis */
+    }
+  }
+  
+  button:active { /* Target button on click (active state) */
+    animation: pulse 0.1s;
+    border-color: var(--hover); /* Change border color during animation */
+    color: #fff; /* Change text color during animation */
+  }
+h1 {
+  font-weight: 400;
+}
+.Caja {
+    background: black;
+    width: 120px;
+    padding: 15px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+
+  }
+
